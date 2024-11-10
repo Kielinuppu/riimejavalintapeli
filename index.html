@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIIMEJÄ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game">
+        <div id="start-screen">
+            <h1>RIIMEJÄ</h1>
+            <button id="start-button">ALOITA</button>
+        </div>
+        <div id="question-container" style="display: none;">
+            <h2>VALITSE OIKEA KUVA:</h2>
+            <img id="paakuva" src="" alt="Pääkuva" class="main-image" onclick="playAudio('main')">
+            <div class="options">
+                <img id="option1" class="option" onclick="selectOption(1)" alt="Vaihtoehto 1">
+                <img id="option2" class="option" onclick="selectOption(2)" alt="Vaihtoehto 2">
+                <img id="option3" class="option" onclick="selectOption(3)" alt="Vaihtoehto 3">
+            </div>
+            <div id="game-controls">
+                <button id="check-button" onclick="checkAnswer()">TARKISTA</button>
+                <img id="next-arrow" src="nuoli.png" onclick="nextQuestion()" style="display: none;" alt="Seuraava kysymys">
+            </div>
+        </div>
+        <div id="star-area">
+            <div id="stars-container"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
